@@ -9,16 +9,17 @@ public class PrincipalFrame extends JFrame{
 
     public PrincipalFrame() {
         setTitle("Slum Management - Jogo");
-        setSize(new Dimension(800, 600));
+        setSize(new Dimension(1280, 720));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
 
+        DashboardPanel DashboardPanel = new DashboardPanel();
         PersonalizacaoPanel personalizacaoPanel = new PersonalizacaoPanel();
         Simulador simulador = new Simulador();
 
-        JogoController controller = new JogoController(this, personalizacaoPanel, simulador);
+        JogoController controller = new JogoController(this, personalizacaoPanel, simulador, DashboardPanel);
         controller.inicializar();
 
         setContentPane(personalizacaoPanel);

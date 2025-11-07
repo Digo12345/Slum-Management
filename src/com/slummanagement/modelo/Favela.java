@@ -45,6 +45,7 @@ public class Favela {
     public int getMercadoriaTotal() { //mostra a mercadoria total
         return mercadoriaTotal;
     }
+    
     public List<Integrante> getIntegrantes() { //mostra os integrantes da favela   
         return integrantes; 
     }

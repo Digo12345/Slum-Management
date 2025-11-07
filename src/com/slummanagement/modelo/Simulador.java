@@ -22,14 +22,11 @@ public class Simulador {
         this.random = random;
         System.out.println("Jogo iniciado!");
     }
-    public String getMensagemBoasVindas() {
-        return "Bem-vindo, " + nomeJogador + " da favela " + nomeFavela + "!";
-    }
 
     public void iniciarLoopTempo() {
         if (timer != null && timer.isRunning()) {
             return; // Já está rodando
-        }
+        } 
         
         // Define o que acontece a cada tick
         ActionListener listener = new ActionListener() {

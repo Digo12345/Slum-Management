@@ -87,27 +87,8 @@ public class PersonalizacaoPanel extends JPanel {
         // botaoJogar.addActionListener(e -> { /* Lógica de iniciar o jogo */ });
     }
 
-    // Este método é essencial para desenhar a imagem de fundo no painel
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        if (imagemFundo != null) {
-            // Desenha a imagem para preencher todo o painel
-            g.drawImage(imagemFundo, 0, 0, getWidth(), getHeight(), this);
-        } else {
-            // Se a imagem não carregou, desenha um fundo escuro
-            g.setColor(Color.ORANGE);
-            g.fillRect(0, 0, getWidth(), getHeight());
-        }
-    }
-
     // Getters para os campos e o botão (para o Controlador acessar)
     public JTextField getCampoNomeJogador() { return campoNomeJogador; }
     public JTextField getCampoNomeFavela() { return campoNomeFavela; }
     public JButton getBotaoJogar() { return botaoJogar; }
-
-    public PersonalizacaoPanel(String mensagem) {
-        labelMensagem = new JLabel(mensagem);
-        add(labelMensagem);
-    }
 }
